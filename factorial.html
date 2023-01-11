@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+<body style="text-align: center; font-size: 20px;">
+    <br><br>
+    <h1>Para Obtener el Factorial de</h1>
+    Digite Su numero<input id="number">
+    <br><br>
+    <button onclick="factorial1()">Calcular Factorial</button>
+    <P id="result"></P>
+    <script>
+        function fact(num) {
+            if (num == 0) {
+                return 1;
+            }
+            else {
+                return num * fact(num - 1);
+            }
+        }
+
+
+        function factorial1() {
+            const num = document.getElementById('number').value;
+            const factorial1 = fact(num);
+            document.getElementById('result').innerHTML = "El valor factorial del numero " + num + ' es: ' + factorial1;
+        }
+       
+
+    </script>
+
+
+</body>
+</head>
+
+</html>
